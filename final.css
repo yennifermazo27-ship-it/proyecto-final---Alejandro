@@ -1,0 +1,120 @@
+body {
+    display: block;
+    font-family: monospace;
+    margin: 0px;
+    background: black;
+}
+
+.encabezado{
+    text-align: center;
+    box-shadow: 0 0 20px red;
+    background: black;
+    padding: 10px;
+    border: 5px solid black;
+}
+
+h1 {
+    display: block;
+    font-size: 2rem;
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+.titulo{
+    color: white;
+}
+
+.logo span {
+    color: red;  
+}
+
+.main{
+    padding: 20px;
+    margin: auto;
+}
+
+.titulo {
+    text-align: center;
+    margin: 20px 0px 10px;
+}
+
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 30px;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.tarjeta {
+    text-align: center;
+    background: grey;
+    padding: 25px 10px; 
+    border-radius: 20px;
+    border: 2px solid black;
+    transform: scale(1);
+    box-shadow: 0 1px 10px black;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+    cursor: pointer;
+}
+
+.tarjeta:hover {
+    transform: scale(1.08);
+    box-shadow: 0 3px 25px red;
+}
+
+.barra {
+    width: 100%;
+    height: 22px;
+    background: #222;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.rellenobarra {
+    width: 60%;
+    height: 100%;
+    background: red;
+    animation: pulse 1s infinite alternate ease-in-out;
+}
+
+@keyframes pulse {
+    from {
+        transform: scaleX(1.0);   
+    }
+    to {
+        transform: scaleX(0.95); 
+    }
+}
+
+.footer {
+    background: black;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    box-shadow: 0 0 20px red;
+}
+
+@media (min-width: 600px) {
+    .contenedor {
+        grid-template-columns: repeat(2, 250px); 
+    }
+}
+
+@media (min-width: 900px) {
+    .contenedor {
+        grid-template-columns: repeat(3, 250px); 
+    }
+}
+
+@media (min-width: 1200px) {
+    .contenedor {
+        grid-template-columns: repeat(3, 300px); 
+    }
+}
